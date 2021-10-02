@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ExplosionController : MonoBehaviour
 {
+    public int damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,6 @@ public class ExplosionController : MonoBehaviour
     {
         if (gameObject.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
         {
-            Debug.Log("Test");
             Destroy(gameObject);
         }
     }

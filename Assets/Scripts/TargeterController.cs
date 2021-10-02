@@ -45,6 +45,7 @@ public class TargeterController : MonoBehaviour
             string[] bombTypes = { "Dynamite", "Grenade" };
             newBomb.GetComponent<BombController>().bombType = bombTypes[itemBar.GetComponent<ItemBarController>().selected - 1];
             newBomb.GetComponent<BombController>().explosionPrefab = explosionPrefab;
+            newBomb.GetComponent<BombController>().playerPos = GameObject.Find("Player(Clone)").transform.position;
         }
     }
 }
