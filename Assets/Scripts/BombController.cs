@@ -24,7 +24,8 @@ public class BombController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Instantiate(explosionPrefab);
+        GameObject explode = Instantiate(explosionPrefab);
+        explode.transform.position = gameObject.transform.position;
         Destroy(gameObject);
     }
 
