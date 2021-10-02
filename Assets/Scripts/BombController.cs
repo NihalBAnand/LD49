@@ -13,10 +13,19 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
-    { 
+    {
+        if (collision.gameObject.tag != "Player")
+        {
+            Destroy(collision.gameObject);
+        }
+        else
+        {
+            Debug.Log("Oops! That's a player!");
+        }
         Destroy(gameObject);
     }
 
