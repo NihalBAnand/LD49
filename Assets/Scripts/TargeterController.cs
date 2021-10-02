@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponController : MonoBehaviour
+public class TargeterController : MonoBehaviour
 {
     public Vector3 mousePos;
     public Camera camera;
     public float mouseAngle;
     public Vector3 playerPos;
+    public GameObject bombPrefab;
+    public float bombSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +30,14 @@ public class WeaponController : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         if (angle < 0f) angle += 360f;
         
-        //Set position of weapon with TRIG
+        //Set position of weapon with TRIG (suck it, anish)
         gameObject.transform.position = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)) * 1.5f + playerPos;
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            GameObject newBomb = Instantiate(bombPrefab);
+            newBomb.transform.position = gameObject.transform.position;
+            newBomb.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - playerPos) * bombSpeed);
+        }
     }
 }

@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Player movement
         if (Input.GetAxisRaw("Vertical") > 0)
         {
             rb.transform.Translate(new Vector3(0, speed, 0));
