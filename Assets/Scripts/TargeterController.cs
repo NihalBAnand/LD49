@@ -11,11 +11,13 @@ public class TargeterController : MonoBehaviour
     public GameObject bombPrefab;
     public float bombSpeed;
     public GameObject explosionPrefab;
+    public GameObject itemBar;
     // Start is called before the first frame update
     void Start()
     {
         playerPos = gameObject.transform.parent.gameObject.transform.position;
         camera = GameObject.Find("Main Camera").GetComponent<Camera>();
+        itemBar = GameObject.Find("ItemBar");
     }
 
     // Update is called once per frame
@@ -41,7 +43,7 @@ public class TargeterController : MonoBehaviour
             newBomb.transform.position = gameObject.transform.position;
             newBomb.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - playerPos) * bombSpeed);
             string[] bombTypes = { "Dynamite", "Grenade" };
-            newBomb.GetComponent<BombController>().bombType = bombTypes[(int)Random.Range(0, 2)];
+            newBomb.GetComponent<BombController>().bombType = bombTypes[itemBar.GetComponent<ItemBarController>().selected - 1];
             newBomb.GetComponent<BombController>().explosionPrefab = explosionPrefab;
         }
     }
