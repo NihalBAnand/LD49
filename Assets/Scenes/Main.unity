@@ -224,7 +224,7 @@ MonoBehaviour:
   mouseAngle: 0
   playerPos: {x: 0, y: 0, z: 0}
   bombPrefab: {fileID: 1242976175056233538, guid: 8d92c357efb1b404eb75723f055e500e, type: 3}
-  bombSpeed: 15
+  bombSpeed: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

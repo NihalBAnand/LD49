@@ -13,10 +13,14 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
+    { 
+        Destroy(gameObject);
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         Destroy(gameObject);
     }

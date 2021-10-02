@@ -5,7 +5,7 @@ using UnityEngine;
 public class TargeterController : MonoBehaviour
 {
     public Vector3 mousePos;
-    public Camera camera;
+    new public Camera camera;
     public float mouseAngle;
     public Vector3 playerPos;
     public GameObject bombPrefab;
