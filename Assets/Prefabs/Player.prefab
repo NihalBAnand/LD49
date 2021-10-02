@@ -102,6 +102,7 @@ MonoBehaviour:
   playerPos: {x: 0, y: 0, z: 0}
   bombPrefab: {fileID: 1242976175056233538, guid: 8d92c357efb1b404eb75723f055e500e, type: 3}
   bombSpeed: 100
+  explosionPrefab: {fileID: 1262917045232269067, guid: 470919b3ef7cf6e46a4763b091fcd56b, type: 3}
 --- !u!1 &1146122952877591445
 GameObject:
   m_ObjectHideFlags: 0
