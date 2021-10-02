@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BombController : MonoBehaviour
 {
+    public string bombType;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,19 +14,11 @@ public class BombController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        gameObject.GetComponent<Animator>().Play(bombType);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag != "Player")
-        {
-            Destroy(collision.gameObject);
-        }
-        else
-        {
-            Debug.Log("Oops! That's a player!");
-        }
         Destroy(gameObject);
     }
 

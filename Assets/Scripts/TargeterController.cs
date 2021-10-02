@@ -38,6 +38,8 @@ public class TargeterController : MonoBehaviour
             GameObject newBomb = Instantiate(bombPrefab);
             newBomb.transform.position = gameObject.transform.position;
             newBomb.GetComponent<Rigidbody2D>().AddForce((gameObject.transform.position - playerPos) * bombSpeed);
+            string[] bombTypes = { "Dynamite", "Grenade" };
+            newBomb.GetComponent<BombController>().bombType = bombTypes[(int)Random.Range(0, 2)];
         }
     }
 }
