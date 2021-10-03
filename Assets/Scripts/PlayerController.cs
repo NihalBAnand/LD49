@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.Play("Player_" + direction);
         }
-        rb.transform.Translate(movement * speed * Time.deltaTime);
+        rb.MovePosition((movement * speed * Time.deltaTime));
     }
 
     public void TakeDamage(int damage)
