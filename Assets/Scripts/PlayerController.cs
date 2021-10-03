@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     string direction = "Down";
 
     public int health = 100;
+    public int chaos = 0;
 
     private Animator anim;
     // Start is called before the first frame update
