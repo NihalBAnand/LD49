@@ -27,7 +27,6 @@ public class PlayerController : MonoBehaviour
     {
         if (chaos >= 100) chaos = 100;
         rb.velocity = new Vector3(0, 0, 0);
-        movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         //Player movement
         if (Input.GetAxisRaw("Vertical") > 0)
         {
@@ -53,6 +52,13 @@ public class PlayerController : MonoBehaviour
         {
             anim.Play("Player_" + direction);
         }
+        
+    }
+
+    public void FixedUpdate()
+    {
+        movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+
         rb.MovePosition(gameObject.transform.position + (movement * speed * Time.deltaTime));
     }
 
