@@ -25,6 +25,11 @@ public class CameraController : MonoBehaviour
         {
             objSpawn();
         }
+        // Temporary vector
+        Vector3 temp = GameObject.Find("Player(Clone)").transform.position;
+        temp.z = temp.z - 15;
+        // Assign value to Camera position
+        transform.position = temp;
     }
 
     public void objSpawn()

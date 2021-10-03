@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 778217877484358602, guid: 7bf40d3348586b84b87e386d054a8fb9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -147,7 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombType: 
+  range: 0
+  damage: 0
   explosionPrefab: {fileID: 0}
+  playerPos: {x: 0, y: 0, z: 0}
 --- !u!95 &8643422427434737370
 Animator:
   serializedVersion: 3
