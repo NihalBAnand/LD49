@@ -133,9 +133,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06471288, y: 0.07742435}
+  m_Offset: {x: -0.07511311, y: 0.062401623}
   serializedVersion: 2
-  m_Radius: 0.090038195
+  m_Radius: 0.22870874
 --- !u!82 &4490490982913768050
 AudioSource:
   m_ObjectHideFlags: 0
@@ -242,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7268971747158889358}
   - component: {fileID: 7412150506373374017}
+  - component: {fileID: 145169132093251686}
   m_Layer: 0
   m_Name: Periphery
   m_TagString: ExplosionPeriphery
@@ -276,6 +277,27 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0658684, y: 0.04853475}
+  m_Offset: {x: -0.08435786, y: 0.04853475}
   serializedVersion: 2
-  m_Radius: 0.20994775
+  m_Radius: 0.3208841
+--- !u!50 &145169132093251686
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704468395470215617}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7

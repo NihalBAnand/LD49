@@ -19,6 +19,21 @@ public class ExplosionController : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Object")
+        {
+            collision.gameObject.GetComponent<ObjectController>().TakeDamage(damage);
+        }
+    }
+
+    public void PeripheryContact(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Object")
+        {
+            collision.gameObject.GetComponent<ObjectController>().TakeDamage(damage / 3);
+        }
+    }
 }
 
