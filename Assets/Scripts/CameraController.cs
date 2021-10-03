@@ -6,7 +6,6 @@ public class CameraController : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject player;
-
     public GameObject[] objs;
     public GameObject objPrefab;
     public GameObject enemyPrefab;
@@ -15,13 +14,13 @@ public class CameraController : MonoBehaviour
     {
         player = Instantiate(playerPrefab);
         player.transform.localScale = new Vector3(4, 4);
+        objs = GameObject.FindGameObjectsWithTag("Object");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-
         objs = GameObject.FindGameObjectsWithTag("Object");
         if (Input.GetKeyDown("space"))
         {
@@ -31,14 +30,12 @@ public class CameraController : MonoBehaviour
         {
             enemySpawn();
         }
-
         // Temporary vector
         Vector3 temp = GameObject.Find("Player(Clone)").transform.position;
         temp.z = temp.z - 15;
         // Assign value to Camera position
         transform.position = temp;
     }
-
 
     public void objSpawn()
     {
@@ -78,6 +75,5 @@ public class CameraController : MonoBehaviour
         GameObject temp = Instantiate(enemyPrefab);
         temp.transform.position = spawnpos;
     }
-
     
 }
