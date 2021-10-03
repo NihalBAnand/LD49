@@ -25,7 +25,7 @@ public class ObjectSpawner : MonoBehaviour
         
         float randx = Random.Range(-.5f, .5f);
         float randy = Random.Range(-.5f, .5f);
-        Vector3 spawnpos = new Vector3(player.transform.x + randx, player.transform.y + randy, 0);
+        Vector3 spawnpos = new Vector3(player.transform.position.x + randx, player.transform.position.y + randy, 0);
         foreach (GameObject g in objs)
         {
             while (Vector3.Distance(g.transform.position, spawnpos) < 1)
@@ -43,7 +43,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Console.Log("agdfskljagljkfd");
+            Debug.Log("agdfskljagljkfd");
             objSpawn();
         }
     }
