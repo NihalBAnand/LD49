@@ -19,11 +19,13 @@ public class PlayerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         health = 100;
+        StartCoroutine(DecreaseChaos());
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (chaos >= 100) chaos = 100;
         rb.velocity = new Vector3(0, 0, 0);
         movement = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         //Player movement
@@ -65,6 +67,16 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             TakeDamage(collision.gameObject.GetComponent<EnemyController>().damage);
+        }
+    }
+
+    private IEnumerator DecreaseChaos()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(3);
+            if (chaos > 0) chaos--;
+            Debug.Log(chaos);
         }
     }
 }

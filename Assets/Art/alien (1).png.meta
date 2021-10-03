@@ -1,40 +1,25 @@
 fileFormatVersion: 2
-guid: bb798d91539ee4c4ba45c65305ef41e2
+guid: cff23f6fd486f2f4d99d22fc7885b514
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6880942536733082134
-    second: cyberpunk tiles_0
+      213: 4392662096924112759
+    second: alien (1)_0
   - first:
-      213: -2219674299415691862
-    second: cyberpunk tiles_1
+      213: 6213761665936698122
+    second: alien (1)_1
   - first:
-      213: 7484773857476427190
-    second: cyberpunk tiles_2
+      213: 246037513356127584
+    second: alien (1)_2
   - first:
-      213: 3776112140845002276
-    second: cyberpunk tiles_3
+      213: -3173821361934165416
+    second: alien (1)_3
   - first:
-      213: -5139762409762952894
-    second: cyberpunk tiles_4
+      213: 6921465601161887731
+    second: alien (1)_4
   - first:
-      213: 8814327107444089991
-    second: cyberpunk tiles_5
-  - first:
-      213: -2621331366985195178
-    second: cyberpunk tiles_6
-  - first:
-      213: 5873002528130609203
-    second: cyberpunk tiles_7
-  - first:
-      213: -5645446570129895129
-    second: cyberpunk tiles_8
-  - first:
-      213: 8641107270152819281
-    second: cyberpunk tiles_9
-  - first:
-      213: 5722044109664094376
-    second: cyberpunk tiles_10
+      213: 8466710955703897763
+    second: alien (1)_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -65,7 +50,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -101,7 +86,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -125,7 +110,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,70 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cyberpunk tiles_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 612c9d5c7c40e7f50800000000000000
-      internalID: 6880942536733082134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyberpunk tiles_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aad734a2cf12231e0800000000000000
-      internalID: -2219674299415691862
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyberpunk tiles_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6bd3307da224fd760800000000000000
-      internalID: 7484773857476427190
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyberpunk tiles_3
+      name: alien (1)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -213,14 +135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e2b134cf1776430800000000000000
-      internalID: 3776112140845002276
+      spriteID: 777fb7167eed5fc30800000000000000
+      internalID: 4392662096924112759
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyberpunk tiles_4
+      name: alien (1)_1
       rect:
         serializedVersion: 2
         x: 32
@@ -234,35 +156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2496c28e155eba8b0800000000000000
-      internalID: -5139762409762952894
+      spriteID: a0ba8113057bb3650800000000000000
+      internalID: 6213761665936698122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyberpunk tiles_5
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7842d4dcdc7c25a70800000000000000
-      internalID: 8814327107444089991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyberpunk tiles_6
+      name: alien (1)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -276,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 651224892092f9bd0800000000000000
-      internalID: -2621331366985195178
+      spriteID: 06d230990d91a6300800000000000000
+      internalID: 246037513356127584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyberpunk tiles_7
+      name: alien (1)_3
       rect:
         serializedVersion: 2
         x: 32
@@ -297,35 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 330323ecea8118150800000000000000
-      internalID: 5873002528130609203
+      spriteID: 85a1e55794254f3d0800000000000000
+      internalID: -3173821361934165416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyberpunk tiles_8
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 721d5fc514857a1b0800000000000000
-      internalID: -5645446570129895129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: cyberpunk tiles_9
+      name: alien (1)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -339,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 152118797416be770800000000000000
-      internalID: 8641107270152819281
+      spriteID: 3fff652fa4cfd0060800000000000000
+      internalID: 6921465601161887731
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cyberpunk tiles_10
+      name: alien (1)_5
       rect:
         serializedVersion: 2
         x: 32
@@ -360,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a805a11dc8c86f40800000000000000
-      internalID: 5722044109664094376
+      spriteID: 3ae83a271cccf7570800000000000000
+      internalID: 8466710955703897763
       vertices: []
       indices: 
       edges: []
