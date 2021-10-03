@@ -12,6 +12,7 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         player = Instantiate(playerPrefab);
+        player.transform.localScale = new Vector3(4, 4);
         objs = GameObject.FindGameObjectsWithTag("Object");
 
     }
