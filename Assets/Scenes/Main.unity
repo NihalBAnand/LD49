@@ -459,6 +459,7 @@ MonoBehaviour:
   player: {fileID: 0}
   objs: []
   objPrefab: {fileID: 1724630716597560661, guid: 1fda96e21e3e3704daf03bcddbc69592, type: 3}
+  enemyPrefab: {fileID: 1582250194388618359, guid: 7d230aae7b835f241993ce9c1fe778c5, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0

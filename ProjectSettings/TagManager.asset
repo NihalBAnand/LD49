@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Explosion
   - ExplosionPeriphery
+  - Object
+  - Enemy
   layers:
   - Default
   - TransparentFX
