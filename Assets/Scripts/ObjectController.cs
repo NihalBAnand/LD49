@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectController : MonoBehaviour
 {
     public int health;
-    public int defense;
+    public float defense;
     public Sprite blank;
     // Start is called before the first frame update
     void Start()
@@ -35,7 +35,7 @@ public class ObjectController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage / defense;
+        health -= (int) (damage / defense);
     }
 
     Color32 AverageColorFromTexture(Texture2D tex)
@@ -62,5 +62,10 @@ public class ObjectController : MonoBehaviour
 
         return new Color32((byte)(r / total), (byte)(g / total), (byte)(b / total), 0);
 
+    }
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Player(Clone)").GetComponent<PlayerController>().chaos += 5;
     }
 }
