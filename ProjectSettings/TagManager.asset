@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Explosion
   - ExplosionPeriphery
+  - Object
+  - Spawn-Area
+  - Obj-Spawn
   layers:
   - Default
   - TransparentFX
