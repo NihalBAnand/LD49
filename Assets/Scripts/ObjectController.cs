@@ -63,4 +63,9 @@ public class ObjectController : MonoBehaviour
         return new Color32((byte)(r / total), (byte)(g / total), (byte)(b / total), 0);
 
     }
+
+    private void OnDestroy()
+    {
+        GameObject.Find("Player(Clone)").GetComponent<PlayerController>().chaos += 5;
+    }
 }

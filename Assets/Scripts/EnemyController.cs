@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        GetComponent<Animator>().Play("Alieeen");
         transform.position = Vector3.MoveTowards(transform.position, GameObject.Find("Player(Clone)").transform.position, 3 * Time.deltaTime);
     }
 
