@@ -31,9 +31,23 @@ public class ItemBarController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Alpha4) && gameObject.transform.GetChild(3).GetChild(0).gameObject.GetComponent<Image>().sprite.texture.name != "Empty_Image")
         {
-            Debug.Log(gameObject.transform.GetChild(3).gameObject.transform.GetChild(0).GetComponent<Image>().sprite.texture.name);
             selected = 4;
         }
+        if (Input.mouseScrollDelta.y < 0)
+        {
+            if (selected < 4 && gameObject.transform.GetChild(selected).GetChild(0).gameObject.GetComponent<Image>().sprite.texture.name != "Empty_Image")
+            {
+                selected += 1;
+            }
+        }
+        if (Input.mouseScrollDelta.y > 0)
+        {
+            if (selected > 1 && gameObject.transform.GetChild(selected - 1).GetChild(0).gameObject.GetComponent<Image>().sprite.texture.name != "Empty_Image")
+            {
+                selected -= 1;
+            }
+        }
+
         for (int i = 0; i < gameObject.transform.childCount; i++)
         {
             GameObject Go = gameObject.transform.GetChild(i).gameObject;
