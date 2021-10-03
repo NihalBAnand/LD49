@@ -7,8 +7,7 @@ TagManager:
   - Explosion
   - ExplosionPeriphery
   - Object
-  - Spawn-Area
-  - Obj-Spawn
+  - Enemy
   layers:
   - Default
   - TransparentFX
