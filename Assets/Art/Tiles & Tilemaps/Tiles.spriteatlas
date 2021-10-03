@@ -51,6 +51,13 @@ SpriteAtlas:
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 7886005919978358932, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: -8136978396274328552, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: 4813851518771315052, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: 5777704327267811495, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: -6516492493384558964, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: 2403222072695270290, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
+  - {fileID: 2847207451748569283, guid: e53e3641ae992914a9c212fed30a50b0, type: 3}
   - {fileID: -8431419487954242428, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - {fileID: 2788464714959837845, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - {fileID: -5753190480230397080, guid: 69c886f1f489f1746a736797b313be93, type: 3}
@@ -220,6 +227,13 @@ SpriteAtlas:
   - {fileID: 3008956069350129030, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - {fileID: -6049499243234405186, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   m_PackedSpriteNamesToIndex:
+  - jungle tiles_2
+  - jungle tiles_3
+  - jungle tiles_0
+  - jungle tiles_1
+  - jungle tiles_6
+  - jungle tiles_4
+  - jungle tiles_5
   - SAND tiles_133
   - SAND tiles_132
   - SAND tiles_131

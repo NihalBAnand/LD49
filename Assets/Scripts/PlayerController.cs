@@ -9,13 +9,15 @@ public class PlayerController : MonoBehaviour
     public Vector3 movement;
     string direction = "Down";
 
+    public int health = 100;
+
     private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-
+        health = 100;
     }
 
     // Update is called once per frame
@@ -49,5 +51,19 @@ public class PlayerController : MonoBehaviour
             anim.Play("Player_" + direction);
         }
         rb.transform.Translate(movement * speed * Time.deltaTime);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        Debug.Log(health);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(collision.gameObject.GetComponent<EnemyController>().damage);
+        }
     }
 }

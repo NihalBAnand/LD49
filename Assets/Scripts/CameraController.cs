@@ -8,6 +8,7 @@ public class CameraController : MonoBehaviour
     public GameObject player;
     public GameObject[] objs;
     public GameObject objPrefab;
+    public GameObject enemyPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,10 @@ public class CameraController : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             objSpawn();
+        }
+        else if (Input.GetMouseButtonDown(1))
+        {
+            enemySpawn();
         }
         // Temporary vector
         Vector3 temp = GameObject.Find("Player(Clone)").transform.position;
@@ -49,6 +54,25 @@ public class CameraController : MonoBehaviour
         }
        
         GameObject temp = Instantiate(objPrefab);
+        temp.transform.position = spawnpos;
+    }
+
+    public void enemySpawn()
+    {
+        float randx = Random.Range(-.5f, .5f);
+        float randy = Random.Range(-.5f, .5f);
+        Vector3 mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
+        Vector3 spawnpos = new Vector3(mousePos.x + randx, mousePos.y + randy, 0);
+        foreach (GameObject g in objs)
+        {
+            while (Vector3.Distance(g.transform.position, spawnpos) < 1)
+            {
+                spawnpos.x += .2f;
+                spawnpos.y += -.3f;
+            }
+        }
+
+        GameObject temp = Instantiate(enemyPrefab);
         temp.transform.position = spawnpos;
     }
     
