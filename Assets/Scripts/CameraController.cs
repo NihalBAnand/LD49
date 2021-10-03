@@ -43,7 +43,6 @@ public class CameraController : MonoBehaviour
         }
        
         GameObject temp = Instantiate(objPrefab);
-        Debug.Log(spawnpos);
         temp.transform.position = spawnpos;
     }
     
