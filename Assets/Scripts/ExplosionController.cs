@@ -34,6 +34,11 @@ public class ExplosionController : MonoBehaviour
         {
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
         }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            Debug.Log("Hey");
+            collision.gameObject.transform.parent.gameObject.GetComponent<BossController>().TakeDamage(damage);
+        }
     }
 
     public void PeripheryContact(Collider2D collision)
@@ -49,6 +54,10 @@ public class ExplosionController : MonoBehaviour
         else if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerController>().TakeDamage(damage / 3);
+        }
+        else if (collision.gameObject.tag == "Boss")
+        {
+            collision.gameObject.transform.parent.gameObject.GetComponent<BossController>().TakeDamage(damage / 3);
         }
     }
 }
