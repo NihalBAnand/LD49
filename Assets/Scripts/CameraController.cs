@@ -9,28 +9,37 @@ public class CameraController : MonoBehaviour
     public GameObject[] objs;
     public GameObject objPrefab;
     public GameObject enemyPrefab;
+    public int enemies;
     // Start is called before the first frame update
     void Start()
     {
         player = Instantiate(playerPrefab);
         player.transform.localScale = new Vector3(4, 4);
-        
+        enemies = 0;
+
 
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector3 playerPos = player.transform.position;
         
-        if (Input.GetMouseButtonDown(1))
+        if (Mathf.RoundToInt(playerPos.x)%20 ==0 && enemies ==0 )
         {
             enemySpawn();
+            enemies += 1; 
         }
         // Temporary vector
         Vector3 temp = GameObject.Find("Player(Clone)").transform.position;
         temp.z = temp.z - 15;
         // Assign value to Camera position
         transform.position = temp;
+        if (Mathf.RoundToInt(playerPos.x) % 20 != 0)
+        { 
+            enemies = 0;
+        }
+
     }
 
     
@@ -39,14 +48,13 @@ public class CameraController : MonoBehaviour
     {
         float randx = Random.Range(-.5f, .5f);
         float randy = Random.Range(-.5f, .5f);
-        Vector3 mousePos = GetComponent<Camera>().ScreenToWorldPoint(Input.mousePosition);
-        Vector3 spawnpos = new Vector3(mousePos.x + randx, mousePos.y + randy, 0);
+        Vector3 spawnpos = new Vector3(player.transform.position.x + randx, player.transform.position.y + randy, 0);
         foreach (GameObject g in objs)
         {
             while (Vector3.Distance(g.transform.position, spawnpos) < 1)
             {
-                spawnpos.x += .2f;
-                spawnpos.y += -.3f;
+                spawnpos.x += 1f;
+                spawnpos.y += 3f;
             }
         }
 
