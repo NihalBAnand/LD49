@@ -12,6 +12,7 @@ public class BossController : MonoBehaviour
 
     public GameObject bombPrefab;
     public GameObject explosionPrefab;
+    public GameObject rocketPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +36,8 @@ public class BossController : MonoBehaviour
             GetComponent<ParticleSystem>().Play();
             var main = gameObject.GetComponent<ParticleSystem>().main;
             float delay = main.startLifetime.constant;
+            GameObject gren = Instantiate(rocketPrefab);
+            gren.transform.position = gameObject.transform.position;
             Destroy(gameObject, delay);
         }
 
