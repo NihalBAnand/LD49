@@ -46,8 +46,8 @@ public class CameraController : MonoBehaviour
 
     public void enemySpawn()
     {
-        float randx = Random.Range(-.5f, .5f);
-        float randy = Random.Range(-.5f, .5f);
+        float randx = Random.Range(-5f, 5f);
+        float randy = Random.Range(-5f, 5f);
         Vector3 spawnpos = new Vector3(player.transform.position.x + randx, player.transform.position.y + randy, 0);
         foreach (GameObject g in objs)
         {
