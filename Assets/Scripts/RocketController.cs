@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GrenadeController : MonoBehaviour
+
+public class RocketController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class GrenadeController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            GameObject.Find("ItemSlot2").transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GetComponent<SpriteRenderer>().sprite;
+            GameObject.Find("ItemSlot3").transform.GetChild(0).gameObject.GetComponent<Image>().sprite = GetComponent<SpriteRenderer>().sprite;
             Destroy(gameObject);
         }
     }
