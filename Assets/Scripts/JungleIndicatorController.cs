@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IndicatorController : MonoBehaviour
+public class JungleIndicatorController : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject DesertBoss;
@@ -11,12 +11,12 @@ public class IndicatorController : MonoBehaviour
     public Vector3 temp;
 
 
-    
+
     void Start()
     {
-        DesertBoss = GameObject.FindGameObjectWithTag("DesertBossFight");
+        DesertBoss = GameObject.Find("GoldPile");
         Player = GameObject.FindGameObjectWithTag("Player");
-    }   
+    }
 
     // Update is called once per frame
     void Update()
