@@ -13,6 +13,7 @@ public class BossFight : MonoBehaviour
 
     public AudioSource source;
     public bool started;
+    public bool finished;
 
     public GameObject player;
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class BossFight : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         started = false;
+        finished = false;
         player = GameObject.Find("Player(Clone)");
     }
 
@@ -33,7 +35,6 @@ public class BossFight : MonoBehaviour
             {
                 source.loop = false;
                 source.Stop();
-                source.PlayOneShot(finale);
             }
         }
     }
@@ -68,7 +69,6 @@ public class BossFight : MonoBehaviour
         {
             yield return null;
         }
-        source.PlayOneShot(ambient);
-        source.loop = true;
+        finished = true;
     }
 }
