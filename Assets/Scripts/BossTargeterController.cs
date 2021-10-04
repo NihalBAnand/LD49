@@ -35,7 +35,7 @@ public class BossTargeterController : MonoBehaviour
         if (angle < 0f) angle += 360f;
 
         //Set position of weapon with TRIG (suck it, anish)
-        gameObject.transform.position = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)) * 5f + playerPos;
+        gameObject.transform.position = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)) * 3f + playerPos;
     }
     private IEnumerator ShootPlayer()
     {

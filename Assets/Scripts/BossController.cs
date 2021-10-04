@@ -16,7 +16,7 @@ public class BossController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        health = 750;
+        health = 100;
         maxHealth = health;
     }
 
