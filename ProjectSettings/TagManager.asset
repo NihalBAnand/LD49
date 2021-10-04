@@ -9,6 +9,8 @@ TagManager:
   - Object
   - Enemy
   - Boss
+  - DesertBossFight
+  - BossFightHealthBar
   layers:
   - Default
   - TransparentFX

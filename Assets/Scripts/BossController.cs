@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossController : MonoBehaviour
 {
     public GameObject player;
     public int health;
+    public int maxHealth;
     public Sprite blank;
 
     public GameObject bombPrefab;
@@ -14,8 +16,8 @@ public class BossController : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        health = 100;
-        
+        health = 750;
+        maxHealth = health;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class BossController : MonoBehaviour
         gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, player.transform.position, Time.deltaTime);
         if (health <= 0)
         {
+            health = 0;
             gameObject.transform.GetChild(1).GetComponent<Animator>().StopPlayback();
             gameObject.transform.GetChild(1).GetComponent<SpriteRenderer>().color = new Color32(255, 255, 255, 0);
             GetComponent<ParticleSystem>().Play();
@@ -34,6 +37,8 @@ public class BossController : MonoBehaviour
             float delay = main.startLifetime.constant;
             Destroy(gameObject, delay);
         }
+
+        GameObject.FindGameObjectWithTag("BossFightHealthBar").transform.localScale = new Vector3(health / (float)maxHealth, 1f, 1f);
     }
 
     public void TakeDamage(int damage)
