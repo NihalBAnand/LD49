@@ -41,7 +41,7 @@ public class BossFight : MonoBehaviour
     {
         if (collision.tag == "Player" && !started)
         {
-            player.transform.GetChild(1);
+            player.transform.GetChild(1).gameObject.SetActive(false);
             started = true;
             GameObject boss = Instantiate(bossPrefab);
             boss.transform.position = transform.position;
