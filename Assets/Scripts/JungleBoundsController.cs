@@ -42,7 +42,7 @@ public class JungleBoundsController : MonoBehaviour
 
         float randx = Random.Range(-30f, 30f);
         float randy = Random.Range(-20f, 20f);
-        Vector3 DesertBounds = new Vector3(-39.373f, 18.2322f, 0);
+        Vector3 DesertBounds = new Vector3(25.6609f, 18.2322f, 0);
         Vector3 spawnpos = new Vector3(DesertBounds.x + randx, DesertBounds.y + randy, 0);
         foreach (GameObject g in objs)
         {

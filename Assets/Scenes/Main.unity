@@ -392,6 +392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inJungle: 0
+  objs: []
+  objPrefab: {fileID: 4538935600932387186, guid: b2448f87c0256d84295cfddcef6f0d94, type: 3}
 --- !u!61 &276064755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -748,6 +750,7 @@ MonoBehaviour:
   objs: []
   objPrefab: {fileID: 1724630716597560661, guid: 1fda96e21e3e3704daf03bcddbc69592, type: 3}
   enemyPrefab: {fileID: 1582250194388618359, guid: 7d230aae7b835f241993ce9c1fe778c5, type: 3}
+  enemies: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
