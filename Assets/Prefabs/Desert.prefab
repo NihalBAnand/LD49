@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7466124388386425682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4664820293727080847}
+  - component: {fileID: 5743535809281629805}
+  m_Layer: 0
+  m_Name: Desert Bounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4664820293727080847
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466124388386425682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7627386136413284949}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &5743535809281629805
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7466124388386425682}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -42.073864, y: 15.96526}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 62.100132, y: 41.813446}
+  m_EdgeRadius: 0
 --- !u!1 &7627386136413284948
 GameObject:
   m_ObjectHideFlags: 0
@@ -31,6 +88,7 @@ Transform:
   m_Children:
   - {fileID: 7627386136625754053}
   - {fileID: 8508630697198155881}
+  - {fileID: 4664820293727080847}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24967,7 +25025,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 15
-      m_TileSpriteIndex: 15
+      m_TileSpriteIndex: 31
       m_TileMatrixIndex: 3
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -26536,8 +26594,8 @@ Tilemap:
     m_Data: {fileID: 2841259662659911609, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -3838017394828834621, guid: 69c886f1f489f1746a736797b313be93, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 320452394132052897, guid: 69c886f1f489f1746a736797b313be93, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 9
     m_Data: {fileID: 5539901587101200957, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - m_RefCount: 9
@@ -26568,8 +26626,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 320452394132052897, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 3063651086646738061, guid: 69c886f1f489f1746a736797b313be93, type: 3}
   - m_RefCount: 4
@@ -26769,6 +26827,26 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!114 &4374765176688593661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508630697198155892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caafc616dddfb354c8d3dc20c9ce161e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossPrefab: {fileID: 0}
+  intro: {fileID: 0}
+  loop: {fileID: 0}
+  finale: {fileID: 8300000, guid: 49d77cd30e0cacd43ad2fb5094a922d1, type: 3}
+  ambient: {fileID: 0}
+  source: {fileID: 0}
+  started: 0
+  player: {fileID: 0}
 --- !u!1001 &6660363500318795407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26826,6 +26904,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bca263d83c1bfcf42b9d674100d168cc, type: 3}
+--- !u!1 &8508630697198155892 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3061013817690447611, guid: bca263d83c1bfcf42b9d674100d168cc, type: 3}
+  m_PrefabInstance: {fileID: 6660363500318795407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8508630697198155881 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3061013817690447590, guid: bca263d83c1bfcf42b9d674100d168cc, type: 3}

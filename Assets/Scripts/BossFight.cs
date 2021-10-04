@@ -9,6 +9,7 @@ public class BossFight : MonoBehaviour
     public AudioClip intro;
     public AudioClip loop;
     public AudioClip finale;
+    public AudioClip ambient;
 
     public AudioSource source;
     public bool started;
@@ -46,7 +47,7 @@ public class BossFight : MonoBehaviour
             GameObject boss = Instantiate(bossPrefab);
             boss.transform.position = transform.position;
             source.PlayOneShot(intro);
-
+            source.loop = false;
             StartCoroutine(PlayLoop());
         }
     }
@@ -60,5 +61,14 @@ public class BossFight : MonoBehaviour
         source.PlayOneShot(loop);
         source.loop = true;
         
+    }
+    private IEnumerator PlayAmbient()
+    {
+        while (source.isPlaying)
+        {
+            yield return null;
+        }
+        source.PlayOneShot(ambient);
+        source.loop = true;
     }
 }
