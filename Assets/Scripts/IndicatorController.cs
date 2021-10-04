@@ -28,7 +28,11 @@ public class IndicatorController : MonoBehaviour
         if (angle < 0f) angle += 360f;
 
         //Set position of weapon with TRIG (suck it, anish)
-        transform.right = -(DesertBoss.transform.position-transform.position);
+        gameObject.transform.position = new Vector3(Mathf.Cos(Mathf.Deg2Rad * angle), Mathf.Sin(Mathf.Deg2Rad * angle)) * 3f + Player.transform.position;
+
+        Vector3 dir = DesertBoss.transform.position - transform.position;
+        float dangle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(dangle - 90, Vector3.forward);
 
     }
 }

@@ -51,6 +51,9 @@ public class BossTargeterController : MonoBehaviour
             newBomb.GetComponent<BombController>().explosionPrefab = explosionPrefab;
             newBomb.GetComponent<BombController>().playerPos = gameObject.transform.position;
             newBomb.GetComponent<BombController>().fromBoss = true;
+            Physics2D.IgnoreCollision(explosionPrefab.GetComponent<CircleCollider2D>(), bombPrefab.GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(explosionPrefab.transform.GetChild(0).GetComponent<CircleCollider2D>(), bombPrefab.GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(newBomb.GetComponent<BoxCollider2D>(), GameObject.Find("ColideTiles").GetComponent<Collider2D>());
             //Physics2D.IgnoreCollision(newBomb.GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
         }
     }
