@@ -15,7 +15,8 @@ public class BombController : MonoBehaviour
     {
         Physics2D.IgnoreCollision(GameObject.Find("Boss Fight").GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
         Physics2D.IgnoreCollision(GameObject.Find("Desert Bounds").GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
-
+        Physics2D.IgnoreCollision(GameObject.Find("Jungle Bounds").GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
+        Physics2D.IgnoreCollision(GameObject.Find("Time Trial").GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
     }
 
     // Update is called once per frame

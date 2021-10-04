@@ -11,6 +11,7 @@ TagManager:
   - Boss
   - DesertBossFight
   - BossFightHealthBar
+  - GoldPile
   layers:
   - Default
   - TransparentFX
