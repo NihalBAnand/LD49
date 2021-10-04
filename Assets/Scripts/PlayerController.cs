@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
 
     public int TotalEnemiesKilled;
     public int health = 100;
+    public int maxHealth = 100;
     public int chaos = 0;
 
     private Animator anim;
@@ -54,7 +55,7 @@ public class PlayerController : MonoBehaviour
         {
             anim.Play("Player_" + direction);
         }
-        
+        GameObject.Find("PlayerHealthBar").transform.GetChild(1).transform.localScale = new Vector3(health / (float)maxHealth, 1, 1);
     }
 
     public void FixedUpdate()
