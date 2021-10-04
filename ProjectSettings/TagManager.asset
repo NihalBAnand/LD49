@@ -8,6 +8,7 @@ TagManager:
   - ExplosionPeriphery
   - Object
   - Enemy
+  - DesertBossFight
   layers:
   - Default
   - TransparentFX

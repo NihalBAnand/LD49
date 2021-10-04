@@ -29759,6 +29759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert
       objectReference: {fileID: 0}
+    - target: {fileID: 7627386136413284948, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_TagString
+      value: DesertBossFight
+      objectReference: {fileID: 0}
     - target: {fileID: 7627386136413284949, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -29802,6 +29806,46 @@ PrefabInstance:
     - target: {fileID: 7627386136413284949, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155881, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155881, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155881, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -30.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155881, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155881, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155883, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_Size.x
+      value: 13.898506
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155883, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_Size.y
+      value: 9.5195675
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155883, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_Offset.x
+      value: -1.5614052
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155883, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.24021626
+      objectReference: {fileID: 0}
+    - target: {fileID: 8508630697198155892, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: m_TagString
+      value: DesertBossFight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
