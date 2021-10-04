@@ -20,6 +20,8 @@ public class EnemyController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
         if (health <= 0)
         {
+            if(GameObject.Find("QuestPointer").gameObject.GetComponent<QuestStart>().qStart == true)
+            GameObject.Find("Player(Clone)").gameObject.GetComponent<PlayerController>().TotalEnemiesKilled += 1;
             Destroy(gameObject);
         }
         GetComponent<Animator>().Play("Alieeen");

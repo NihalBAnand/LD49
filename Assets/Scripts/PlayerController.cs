@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 movement;
     string direction = "Down";
 
+    public int TotalEnemiesKilled;
     public int health = 100;
     public int chaos = 0;
 
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        TotalEnemiesKilled = 0;
         rb = gameObject.GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         health = 100;
@@ -75,6 +77,7 @@ public class PlayerController : MonoBehaviour
             TakeDamage(collision.gameObject.GetComponent<EnemyController>().damage);
         }
     }
+   
 
     private IEnumerator DecreaseChaos()
     {
