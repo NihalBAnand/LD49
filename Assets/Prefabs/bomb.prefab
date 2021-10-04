@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7399098176094953637}
   - component: {fileID: 2499998170871776567}
   - component: {fileID: 3592141611659094070}
-  - component: {fileID: 4277987081481225687}
   - component: {fileID: 7023802356837014815}
   - component: {fileID: 8643422427434737370}
+  - component: {fileID: 6069689918901863807}
   m_Layer: 0
   m_Name: bomb
   m_TagString: Untagged
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.000000007450581, y: -0.0010782927}
@@ -113,7 +113,44 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.28865707, y: 0.24336925}
   m_EdgeRadius: 0
---- !u!50 &4277987081481225687
+--- !u!114 &7023802356837014815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242976175056233538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e09cf57121ecd34496c187687211709, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombType: 
+  range: 0
+  damage: 0
+  explosionPrefab: {fileID: 1262917045232269067, guid: 470919b3ef7cf6e46a4763b091fcd56b, type: 3}
+  playerPos: {x: 0, y: 0, z: 0}
+  fromBoss: 0
+--- !u!95 &8643422427434737370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242976175056233538}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c355c32b5acb08b4faddf936cd3efef2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!50 &6069689918901863807
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -134,39 +171,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7023802356837014815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242976175056233538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e09cf57121ecd34496c187687211709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombType: 
-  range: 0
-  damage: 0
-  explosionPrefab: {fileID: 0}
-  playerPos: {x: 0, y: 0, z: 0}
---- !u!95 &8643422427434737370
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242976175056233538}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c355c32b5acb08b4faddf936cd3efef2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

@@ -9,6 +9,7 @@ public class BombController : MonoBehaviour
     public int damage;
     public GameObject explosionPrefab;
     public Vector3 playerPos;
+    public bool fromBoss = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class BombController : MonoBehaviour
         if (GameObject.Find("Main Camera").GetComponent<Camera>().WorldToViewportPoint(transform.position).x < 0 || GameObject.Find("Main Camera").GetComponent<Camera>().WorldToViewportPoint(transform.position).x > 1 || GameObject.Find("Main Camera").GetComponent<Camera>().WorldToViewportPoint(transform.position).y < 0 || GameObject.Find("Main Camera").GetComponent<Camera>().WorldToViewportPoint(transform.position).y > 1)
         {
             GameObject explode = Instantiate(explosionPrefab);
+            Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
             explode.transform.position = gameObject.transform.position;
             if (bombType == "Rocket")
             {
@@ -55,6 +57,7 @@ public class BombController : MonoBehaviour
         if (Vector3.Distance(gameObject.transform.position, playerPos) > range)
         {
             GameObject explode = Instantiate(explosionPrefab);
+            Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
             explode.transform.position = gameObject.transform.position;
             if (bombType == "Rocket")
             {
@@ -69,9 +72,11 @@ public class BombController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         GameObject explode = Instantiate(explosionPrefab);
+        Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
         explode.transform.position = gameObject.transform.position;
         if (bombType == "Rocket")
         {
@@ -83,10 +88,9 @@ public class BombController : MonoBehaviour
         }
         explode.GetComponent<ExplosionController>().damage = damage;
         Destroy(gameObject);
+        
+        
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
+   
 }
