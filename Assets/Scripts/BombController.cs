@@ -71,7 +71,7 @@ public class BombController : MonoBehaviour
             explode.transform.position = gameObject.transform.position;
             if (bombType == "Rocket")
             {
-                explode.transform.localScale = new Vector3(5 * .7f, 5 * .7f, 1);
+                explode.transform.localScale = new Vector3((5 * .7f), (5 * .7f), 1);
             }
             else if (bombType == "C4")
             {
