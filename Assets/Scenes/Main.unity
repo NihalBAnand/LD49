@@ -565,6 +565,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 79807284}
     m_Modifications:
+    - target: {fileID: 123582768725498899, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
+      propertyPath: objPrefab
+      value: 
+      objectReference: {fileID: 612859108587624065, guid: b43cf87ce9a2c5e4d9275a48d0eaf3f5, type: 3}
     - target: {fileID: 7627386136413284948, guid: aba64c574c9e4804fa46498515aa4fbc, type: 3}
       propertyPath: m_Name
       value: Desert
