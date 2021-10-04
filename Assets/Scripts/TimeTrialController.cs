@@ -10,7 +10,7 @@ public class TimeTrialController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeLeft = 5;
+        timeLeft = 90;
     }
 
     // Update is called once per frame
@@ -30,8 +30,17 @@ public class TimeTrialController : MonoBehaviour
     {
         while (timeLeft > 0)
         {
+            if (timeLeft == 90)
+            {
+                GameObject.Find("Disp").GetComponent<Text>().text = "PROTECT";
+            }
+            else
+            {
+                GameObject.Find("Disp").GetComponent<Text>().text = "";
+            }
             yield return new WaitForSeconds(1);
             GameObject.Find("Timer").GetComponent<Text>().text = (timeLeft / 60).ToString() + ":" + (timeLeft % 60).ToString();
+            
             timeLeft -= 1;
         }
         GameObject.Find("Timer").SetActive(false);

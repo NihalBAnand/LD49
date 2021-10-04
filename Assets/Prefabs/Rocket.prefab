@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7084560772754384045}
   - component: {fileID: 8682276915706146795}
   - component: {fileID: 4852261752247841489}
+  - component: {fileID: 8394853811931088744}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Rocket
@@ -96,3 +97,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c47df1c39f135b64ca243e6c1d43a51c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &8394853811931088744
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4584596643531671224}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.00985118, y: -0.009851173}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.32, y: 0.32}
+    newSize: {x: 0.32, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.24234958, y: 0.24003166}
+  m_EdgeRadius: 0

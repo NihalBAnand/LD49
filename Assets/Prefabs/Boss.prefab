@@ -382,6 +382,7 @@ MonoBehaviour:
   blank: {fileID: 21300000, guid: 163b3ecd3677bbc489f30262f890bfc8, type: 3}
   bombPrefab: {fileID: 1242976175056233538, guid: 8d92c357efb1b404eb75723f055e500e, type: 3}
   explosionPrefab: {fileID: 1262917045232269067, guid: 470919b3ef7cf6e46a4763b091fcd56b, type: 3}
+  rocketPrefab: {fileID: 4584596643531671224, guid: f4c6b02a68d40914ab7f417992a151b9, type: 3}
 --- !u!198 &8305975008508241805
 ParticleSystem:
   m_ObjectHideFlags: 0

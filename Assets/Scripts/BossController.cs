@@ -13,12 +13,14 @@ public class BossController : MonoBehaviour
     public GameObject bombPrefab;
     public GameObject explosionPrefab;
     public GameObject rocketPrefab;
+    public bool spawnedRocket;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         health = 100;
         maxHealth = health;
+        spawnedRocket = false;
     }
 
     // Update is called once per frame
@@ -36,8 +38,12 @@ public class BossController : MonoBehaviour
             GetComponent<ParticleSystem>().Play();
             var main = gameObject.GetComponent<ParticleSystem>().main;
             float delay = main.startLifetime.constant;
-            GameObject gren = Instantiate(rocketPrefab);
-            gren.transform.position = gameObject.transform.position;
+            if (!spawnedRocket)
+            {
+                GameObject gren = Instantiate(rocketPrefab);
+                gren.transform.position = gameObject.transform.position;
+                spawnedRocket = true;
+            }
             Destroy(gameObject, delay);
         }
 
