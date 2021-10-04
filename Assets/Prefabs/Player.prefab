@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4572942935794371076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.141, y: 0.349, z: 0}
+  m_LocalPosition: {x: 0.019, y: 0.349, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 8505005106458853878}
@@ -348,12 +348,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 15
-  m_Sprite: {fileID: 21300000, guid: f9fe6f1a57780564dbb4542812f717c9, type: 3}
+  m_Sprite: {fileID: -8195832976526413010, guid: f9fe6f1a57780564dbb4542812f717c9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.05, y: 0.06}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -372,3 +372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DesertBoss: {fileID: 0}
+  mouseAngle: 0
+  Player: {fileID: 0}
+  temp: {x: 0, y: 0, z: 0}

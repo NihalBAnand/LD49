@@ -13,7 +13,7 @@ public class BombController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Physics2D.IgnoreCollision(GameObject.Find("Boss Fight").GetComponent<BoxCollider2D>(), GetComponent<BoxCollider2D>());
     }
 
     // Update is called once per frame
@@ -24,6 +24,7 @@ public class BombController : MonoBehaviour
         {
             GameObject explode = Instantiate(explosionPrefab);
             Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(explode.transform.GetChild(0).GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
             explode.transform.position = gameObject.transform.position;
             if (bombType == "Rocket")
             {
@@ -58,6 +59,7 @@ public class BombController : MonoBehaviour
         {
             GameObject explode = Instantiate(explosionPrefab);
             Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(explode.transform.GetChild(0).GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
             explode.transform.position = gameObject.transform.position;
             if (bombType == "Rocket")
             {
@@ -74,21 +76,23 @@ public class BombController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        GameObject explode = Instantiate(explosionPrefab);
-        Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
-        explode.transform.position = gameObject.transform.position;
-        if (bombType == "Rocket")
+        if (collision.tag != "Explosion" && collision.tag != "ExplosionPeriphery")
         {
-            explode.transform.localScale = new Vector3(.7f, .7f, 1);
+            GameObject explode = Instantiate(explosionPrefab);
+            Physics2D.IgnoreCollision(explode.GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(explode.transform.GetChild(0).GetComponent<CircleCollider2D>(), GetComponent<BoxCollider2D>());
+            explode.transform.position = gameObject.transform.position;
+            if (bombType == "Rocket")
+            {
+                explode.transform.localScale = new Vector3(.7f, .7f, 1);
+            }
+            else if (bombType == "C4")
+            {
+                explode.transform.localScale = new Vector3(4.5f, 4.5f, 1);
+            }
+            explode.GetComponent<ExplosionController>().damage = damage;
+            Destroy(gameObject);
         }
-        else if (bombType == "C4")
-        {
-            explode.transform.localScale = new Vector3(4.5f, 4.5f, 1);
-        }
-        explode.GetComponent<ExplosionController>().damage = damage;
-        Destroy(gameObject);
-        
         
     }
 

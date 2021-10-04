@@ -46,6 +46,10 @@ public class TargeterController : MonoBehaviour
             newBomb.GetComponent<BombController>().bombType = bombTypes[itemBar.GetComponent<ItemBarController>().selected - 1];
             newBomb.GetComponent<BombController>().explosionPrefab = explosionPrefab;
             newBomb.GetComponent<BombController>().playerPos = GameObject.Find("Player(Clone)").transform.position;
+            Physics2D.IgnoreCollision(explosionPrefab.GetComponent<CircleCollider2D>(), bombPrefab.GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(explosionPrefab.transform.GetChild(0).GetComponent<CircleCollider2D>(), bombPrefab.GetComponent<BoxCollider2D>());
+            Physics2D.IgnoreCollision(newBomb.GetComponent<BoxCollider2D>(), GameObject.Find("ColideTiles").GetComponent<Collider2D>());
+
         }
     }
 }
