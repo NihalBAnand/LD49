@@ -15,8 +15,7 @@ public class DesertBoundsController : MonoBehaviour
         DoneOnce = false;
         inDesert = false;
         for (int i = 0; i < 70; i++)
-        {
-            Debug.Log("BRAIN");
+        { 
             objSpawn();
         }
     }

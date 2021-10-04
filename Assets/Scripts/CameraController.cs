@@ -36,8 +36,7 @@ public class CameraController : MonoBehaviour
         // Assign value to Camera position
         transform.position = temp;
         if (Mathf.RoundToInt(playerPos.x) % 20 != 0)
-        {
-            Debug.Log("kjlfdasklj");
+        { 
             enemies = 0;
         }
 
