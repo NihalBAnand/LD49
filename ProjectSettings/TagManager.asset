@@ -11,6 +11,9 @@ TagManager:
   - Boss
   - DesertBossFight
   - BossFightHealthBar
+  - GoldPile
+  - Grenade
+  - Rocket
   layers:
   - Default
   - TransparentFX
