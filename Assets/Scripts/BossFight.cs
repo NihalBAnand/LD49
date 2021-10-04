@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossFight : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class BossFight : MonoBehaviour
             boss.transform.position = transform.position;
             source.PlayOneShot(intro);
             source.loop = false;
+            GameObject.Find("Disp").GetComponent<Text>().text = "FIGHT";
             StartCoroutine(PlayLoop());
         }
     }
@@ -70,5 +72,14 @@ public class BossFight : MonoBehaviour
             yield return null;
         }
         finished = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player" && !started)
+        {
+            GameObject.Find("Disp").GetComponent<Text>().text = "";
+
+        }
     }
 }
